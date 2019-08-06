@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package practico;
+
+/**
+ *
+ * @author JUAN
+ */
+public class Caballero extends Personajes{
+    
+    private int salud;
+    private int ataque;
+    private int defensa;
+
+    public Caballero(int salud, int ataque, int defensa, String nombre, int xp) {
+        super(nombre, xp);
+        this.salud = salud;
+        this.ataque = ataque;
+        this.defensa = defensa;
+    }
+
+    
+
+    public String getSalud() {
+            return "" + salud;
+    }
+
+    public boolean estaSaludable() {
+            if (salud > 0) {
+                    return true;
+            } else {
+                    return false;
+            }
+    }
+
+    public void atacar(Orco o) {
+            System.out.println(nombre + " ataca!");
+            int daño = ataque;
+            o.recibirDaño(daño);
+            xp += 10;
+    }
+
+    public void recibirDaño(int daño) {
+            int golpe = daño + defensa;
+            salud -= golpe;
+            System.out.println(nombre + " recibe " + golpe + " de daño.");
+    }
+
+    @Override
+    public String toString() {
+            return nombre + " tiene " + xp + " puntos de experiencia.";
+    }
+}
