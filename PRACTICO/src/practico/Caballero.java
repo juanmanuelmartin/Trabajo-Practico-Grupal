@@ -14,6 +14,8 @@ public class Caballero extends Personajes{
     private int salud;
     private int ataque;
     private int defensa;
+    private int contulti;
+    private boolean ultidis;
 
     public Caballero(int salud, int ataque, int defensa, String nombre, int xp) {
         super(nombre, xp);
@@ -41,6 +43,7 @@ public class Caballero extends Personajes{
             int daño = ataque;
             o.recibirDaño(daño);
             xp += 10;
+            contulti += 10;
     }
 
     public void recibirDaño(int daño) {
@@ -48,6 +51,32 @@ public class Caballero extends Personajes{
             salud -= golpe;
             System.out.println(nombre + " recibe " + golpe + " de daño.");
     }
+    public boolean ultic() {
+            boolean ultidis;  
+            if(contulti==100){
+            System.out.println("Habilidad especial  del caballero dsiponible");
+            ultidis = true;
+            }else{
+            ultidis = false;
+            System.out.println("Habilidad especial del caballero en preparación");
+            }
+            return ultidis; }
+    public int ultiu(Orco o){
+            int dañoulti = 0;
+            if(ultidis){
+            System.out.println("El " + nombre + " ha utilizado su habilidad especial");
+            dañoulti =380;
+          }return dañoulti;
+    }
+    
+    
+    
+    public void recibirUltiOrco(int daño) {
+            int golpe = o.dañoulti + defensa;
+            salud -= golpe;
+            System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
+    }
+    
 
     @Override
     public String toString() {
