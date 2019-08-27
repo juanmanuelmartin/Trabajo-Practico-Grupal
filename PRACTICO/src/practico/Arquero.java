@@ -71,18 +71,18 @@ public class Orco extends Personajes{
             salud -= golpe;
             System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
     }
+ public void recibirUltiCaballero(int daño) {
+            int golpe = c.dañoulti + defensa;
+            salud -= golpe;
+            System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
+    }
  public void recibirUltiMago(int daño) {
             int golpe = m.dañoulti + defensa;
             salud -= golpe;
             System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
     }
- public void recibirUltiArquero(int daño) {
-            int golpe = a.dañoulti + defensa;
-            salud -= golpe;
-            System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
-    }
-    @Override
     public String toString() {
             return nombre + " tiene " + xp + " puntos de experiencia.";
     }
 }
+

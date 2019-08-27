@@ -9,14 +9,14 @@ package practico;
  *
  * @author juanp
  */
-public class Orco extends Personajes{
+public class Mago extends Personajes{
     
     private int salud;
     private int ataque;
     private int defensa;
     private int contulti;
 
-    public Orco(int salud, int ataque, int defensa, String nombre, int xp) {
+    public Mago(int salud, int ataque, int defensa, String nombre, int xp) {
         super(nombre, xp);
         this.salud = salud;
         this.ataque = ataque;
@@ -66,13 +66,13 @@ public class Orco extends Personajes{
           }
             return dañoulti;
     }
- public void recibirUltiOrco(int daño) {
-            int golpe = o.dañoulti + defensa;
+ public void recibirUltiCaballero(int daño) {
+            int golpe = c.dañoulti + defensa;
             salud -= golpe;
             System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
     }
- public void recibirUltiMago(int daño) {
-            int golpe = m.dañoulti + defensa;
+ public void recibirUltiOrco(int daño) {
+            int golpe = o.dañoulti + defensa;
             salud -= golpe;
             System.out.println(nombre + " recibe " + golpe + " de daño causado por la habilidad especial .");
     }
@@ -85,4 +85,6 @@ public class Orco extends Personajes{
     public String toString() {
             return nombre + " tiene " + xp + " puntos de experiencia.";
     }
+}
+
 }
