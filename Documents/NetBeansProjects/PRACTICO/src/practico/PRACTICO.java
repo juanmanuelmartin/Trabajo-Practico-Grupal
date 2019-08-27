@@ -8,9 +8,44 @@ public class PRACTICO {
 
 
     public static void main(String[] args) {
+        ventanaLogin vL = new ventanaLogin();
+        
+        vL.orco.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+            }
+            
+        } );
+        vL.caballero.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+            }
+            
+        } );
+        vL.arquero.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+            }
+            
+        } );
+        vL.mago.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+            }
+            
+        } );
+        
+        
+        
+//---------------------------------------------------------------------------------------
+        
         PiedraPapelTijeras ppt = new PiedraPapelTijeras();
         Ventana ventana = new Ventana();
-        
+
         ventana.botonpapel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
