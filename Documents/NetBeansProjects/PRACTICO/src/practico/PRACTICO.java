@@ -88,6 +88,7 @@ public class PRACTICO {
             }
             
         } );
+        ventana.setVisible(true);
     }
     
 }
